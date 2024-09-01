@@ -1,0 +1,38 @@
+parts {
+    device {
+        display {
+            width 1242
+            height 2688
+            x 0
+            y 0
+        }
+    }
+
+    portrait {
+        background {
+            image frame.png
+        }
+        foreground {
+            mask screen.png
+        }
+        
+    }
+}
+
+layouts {
+    portrait {
+        width 1400
+        height 2800
+        event EV_SW:0:1
+        part1 {
+            name portrait
+            x 0
+            y 0
+        }
+        part2 {
+            name device
+            x 75
+            y 52
+        }
+
+    }
